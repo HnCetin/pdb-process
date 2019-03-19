@@ -1,4 +1,7 @@
 function [radius_gyration] = radius_gyration(coords)
+% Syntax: [radius_gyration] = radius_gyration(coords)
+%
+% coords: A double structure contains values for X, Y and Z coordinates.
 
     masscenter(1,1) = mean(coords(:,1)); 
     masscenter(1,2) = mean(coords(:,2));
