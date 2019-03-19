@@ -1,9 +1,9 @@
 %% Protein Selection
-% pro1 = getpdb('4AKE');
-% pro2 = getpdb('1AKE');
+pro1 = getpdb('4AKE');
+pro2 = getpdb('1AKE');
 % save proteins.mat pro1 pro2
-load proteins.mat
 
+% load proteins.mat
 pro1 = process_pdb(pro1, 'A');
 pro2 = process_pdb(pro2, 'A');
 
@@ -57,13 +57,13 @@ figure(2)
             ylabel('Psi (Degrees)');
  
 % Plotted onto built-in ramachandran to see if it is correct
-  ramachandran_official('4AKE.pdb','chain','A') 
-	hold on
-	scatter(pro1.PhiPsiAngles(:,1), pro1.PhiPsiAngles(:,2))
-    
-% 	ramachandran_official('1AKE.pdb','chain','A')
-% 	hold on
-% 	scatter(pro2.PhiPsiAngles(:,1), pro2.PhiPsiAngles(:,2))
+% ramachandran('4AKE.pdb','chain','A') 
+% hold on
+% scatter(pro1.PhiPsiAngles(:,1), pro1.PhiPsiAngles(:,2))
+%     
+% ramachandran('1AKE.pdb','chain','A')
+% hold on
+% scatter(pro2.PhiPsiAngles(:,1), pro2.PhiPsiAngles(:,2))
 
 
 % Plots of bond properties:
